@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color: #ffffff;
+  --foreground: #171717;
+  --yellow: #fdc964;
+  --box-color: #1e1e1e;
+}
+
+.side-bar {
+  background: var(--box-color);
+}
+.side-bar::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+.side-bar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.side-icon {
+  color: var(--yellow);
+}
+.navbar {
+  display: flex;
+  justify-content: end;
+}
+.navbar ul li {
+  font-weight: 500;
+}
+.about {
+  background: var(--box-color);
+  color: #ffff;
+}
+.resume {
+  background: var(--box-color);
+  color: #ffff;
+}
+.contact {
+  background: var(--box-color);
+  color: #ffff;
+}
+.portfolio {
+  background: var(--box-color);
+  color: #ffff;
+}
