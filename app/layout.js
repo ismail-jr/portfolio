@@ -1,7 +1,6 @@
-// import Sidebar from "@/components/Sidebar";
 import { Inter, Roboto_Mono } from "next/font/google";
-import "../styles/globals.css";
 import Sidebar from "@/components/sidebar";
+import "../styles/globals.css";
 
 // Use the Inter font for the main body
 const inter = Inter({
@@ -22,7 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="black">
+    <html lang="en">
       <body
         className={`${inter.variable} ${robotoMono.variable} antialiased flex flex-col`}
       >
@@ -30,9 +29,9 @@ export default function RootLayout({ children }) {
         <div className="h-16"></div>
 
         {/* Main Layout */}
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           {/* Sidebar */}
-          <div className="pl-10">
+          <div className="pl-6 pb-4 sm:w-72 w-full">
             <Sidebar />
           </div>
 
