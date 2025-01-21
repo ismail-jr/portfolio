@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = ({ activeSection, setActiveSection }) => {
   return (
     <nav className="navbar">
-      <ul className="flex space-x-8 -mt-20 p-5 shadow-yellow-500 rounded-xl shadow-sm">
+      <ul className="flex space-x-7 -mt-20 p-5 shadow-yellow-500 rounded-xl shadow-sm">
         <li>
           <button
             onClick={() => setActiveSection("about")}
