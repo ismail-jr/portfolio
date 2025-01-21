@@ -128,7 +128,7 @@ const Sidebar = () => {
           {/* Social Media Icons */}
           <div className="flex justify-center space-x-4 mt-4">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/ismail-jr"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-yellow-500"
@@ -136,7 +136,7 @@ const Sidebar = () => {
               <GitHub className="text-3xl" />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/jibriel-ismail-309a88266"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-500"
