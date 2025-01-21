@@ -27,7 +27,7 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col sm:flex-row">
       {/* Sidebar */}
-      <div className="side-bar w-full sm:w-72 h-auto p-6 rounded-xl shadow-lg border border-gray-600 bg-gray-900 flex flex-col space-y-6 overflow-y-auto scrollbar-hide relative">
+      <div className="side-bar w-full sm:w-72 h-auto p-6 rounded-2xl shadow-lg border border-gray-600 bg-gray-900 flex flex-col space-y-6 overflow-y-auto scrollbar-hide relative">
         {/* Profile Section */}
         <div className="flex items-center sm:flex-col sm:items-center justify-between w-full">
           {/* Profile Image */}
@@ -55,12 +55,13 @@ const Sidebar = () => {
           {/* Toggle Button for Medium and Small Screens */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-white sm:hidden flex items-center justify-center mt-4"
+            className="text-white sm:hidden flex absolute top-0 right-0 transform -translate-x-1/2"
+            title="show contact"
           >
             {isExpanded ? (
-              <ArrowDropUp className="text-3xl" />
+              <ArrowDropUp className="text-3xl text-yellow-500" />
             ) : (
-              <ArrowDropDown className="text-3xl" />
+              <ArrowDropDown className="text-3xl text-yellow-500 bg-slate-700 rounded-lg shadow-xl" />
             )}
           </button>
         </div>

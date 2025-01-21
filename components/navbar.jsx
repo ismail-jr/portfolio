@@ -25,7 +25,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                 : "text-gray-600"
             }`}
           >
-            Portfolio
+            Resume
           </button>
         </li>
         <li>
@@ -37,7 +37,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                 : "text-gray-600"
             }`}
           >
-            Resume
+            Portfolio
           </button>
         </li>
         <li>
