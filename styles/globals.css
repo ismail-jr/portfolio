@@ -12,7 +12,10 @@
 body {
   color: var(--foreground);
   background: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .side-bar {
   background: var(--box-color);
@@ -31,6 +34,7 @@ body {
 .navbar {
   display: flex;
   justify-content: end;
+  margin-left: 30px;
 }
 .navbar ul li {
   font-weight: 500;
@@ -51,7 +55,7 @@ body {
   background: var(--box-color);
   color: #ffff;
 }
-.about-p {
+.p {
   line-height: 1.7rem;
   color: #b6b6b6;
 }

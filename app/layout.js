@@ -1,17 +1,17 @@
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Lato, Montserrat } from "next/font/google";
 import Sidebar from "@/components/sidebar";
 import "../styles/globals.css";
 
 // Use the Inter font for the main body
-const inter = Inter({
-  variable: "--font-inter",
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
+  weight: ["300", "400", "700"],
 });
-
-// Use Roboto Mono for code or monospaced text
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
+const mon = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["300", "400", "700"],
 });
 
 export const metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${robotoMono.variable} antialiased flex flex-col`}
+        className={`${mon.variable} ${mon.variable} antialiased flex flex-col`}
       >
         {/* Spacer for top margin */}
         <div className="h-16"></div>

@@ -27,7 +27,7 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col sm:flex-row">
       {/* Sidebar */}
-      <div className="side-bar w-full sm:w-72 h-auto p-6 rounded-2xl shadow-lg border border-gray-600 bg-gray-900 flex flex-col space-y-6 overflow-y-auto scrollbar-hide relative">
+      <div className="side-bar w-full sm:w-72 h-auto p-6 pt-12 rounded-2xl shadow-lg border border-gray-600 bg-gray-900 flex flex-col space-y-6 overflow-y-auto scrollbar-hide relative">
         {/* Profile Section */}
         <div className="flex items-center sm:flex-col sm:items-center justify-between w-full">
           {/* Profile Image */}
@@ -47,7 +47,7 @@ const Sidebar = () => {
               JIBRIEL ISMAIL
             </h2>{" "}
             {/* Added margin-bottom */}
-            <p className="text-white mt-2 sm:mt-0 sm:ml-4 rounded-lg shadow-sm shadow-yellow-500 p-2">
+            <p className="text-white mt-2 sm:mt-0 sm:ml-4 rounded-lg shadow-sm shadow-yellow-600 p-2">
               Software Engineer
             </p>
           </div>
@@ -59,9 +59,9 @@ const Sidebar = () => {
             title="show contact"
           >
             {isExpanded ? (
-              <ArrowDropUp className="text-3xl text-yellow-500" />
+              <ArrowDropUp className="text-3xl text-yellow-600" />
             ) : (
-              <ArrowDropDown className="text-3xl text-yellow-500 bg-slate-700 rounded-lg shadow-xl" />
+              <ArrowDropDown className="text-3xl text-yellow-600 bg-slate-700 rounded-lg shadow-xl" />
             )}
           </button>
         </div>
@@ -78,7 +78,7 @@ const Sidebar = () => {
           <div className="space-y-6 mt-4">
             {/* Email */}
             <div className="flex items-start space-x-3">
-              <EmailOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-500" />
+              <EmailOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600" />
               <div>
                 <h1 className="text-sm font-semibold text-white">EMAIL</h1>
                 <a
@@ -92,7 +92,7 @@ const Sidebar = () => {
 
             {/* Phone */}
             <div className="flex items-start space-x-3">
-              <PhoneAndroidOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-500" />
+              <PhoneAndroidOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600" />
               <div>
                 <h1 className="text-sm font-semibold text-white">PHONE</h1>
                 <a
@@ -106,7 +106,7 @@ const Sidebar = () => {
 
             {/* Birthday */}
             <div className="flex items-start space-x-3">
-              <CalendarViewMonthOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-500" />
+              <CalendarViewMonthOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600" />
               <div>
                 <h1 className="text-sm font-semibold text-white">BIRTHDAY</h1>
                 <p className="text-sm text-gray-500">OCT 21, 2002</p>
@@ -115,7 +115,7 @@ const Sidebar = () => {
 
             {/* Location */}
             <div className="flex items-start space-x-3">
-              <RoomOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-500" />
+              <RoomOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600" />
               <div>
                 <h1 className="text-sm font-semibold text-white">LOCATION</h1>
                 <p className="text-sm text-gray-500">Kumasi, Ghana</p>
@@ -131,7 +131,7 @@ const Sidebar = () => {
               href="https://github.com/ismail-jr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-yellow-500"
+              className="text-gray-600 hover:text-yellow-600"
             >
               <GitHub className="text-3xl" />
             </a>

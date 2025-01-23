@@ -6,16 +6,16 @@ const About = () => {
       <div className="about p-6 ">
         <h1 className="text-4xl font-bold mb-10 relative">
           About Me
-          <span className="absolute left-0 bottom-[-14px] w-16 h-1.5 bg-yellow-500 rounded"></span>
+          <span className="absolute left-0 bottom-[-14px] w-16 h-1.5 bg-yellow-600 rounded"></span>
         </h1>
-        <p className="about-p">
+        <p className="p">
           I’m Jibriel Ismail software engineer and full stack web developer with
           5 years experience, from Ghana. I enjoy turning complex problems into
           simple, beautiful and intuitive designs.
         </p>
         <div className="my-4"></div>
 
-        <p className="about-p">
+        <p className="p">
           Specializing in Node.js, React.JS and Next.JS as framework. I focus on
           building secure, scalable systems, with a strong foundation in cloud
           cybersecurity. As a Backend Engineer at KIG (Koudri Innovation
