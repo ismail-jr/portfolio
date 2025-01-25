@@ -7,8 +7,9 @@ import {
   RoomOutlined,
   ArrowDropDown,
   ArrowDropUp,
+  X,
 } from "@mui/icons-material";
-import { GitHub, LinkedIn, Twitter, Instagram } from "@mui/icons-material";
+import { GitHub, LinkedIn, Instagram } from "@mui/icons-material";
 import Image from "next/image";
 
 const Sidebar = () => {
@@ -144,15 +145,15 @@ const Sidebar = () => {
               <LinkedIn className="text-3xl" />
             </a>
             <a
-              href="https://twitter.com/yourusername"
+              href="https://twitter.com/IsmailJibr36051"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-400"
             >
-              <Twitter className="text-3xl" />
+              <X className="text-3xl" />
             </a>
             <a
-              href="https://instagram.com/yourusername"
+              href="https://instagram.com/ismail.jibriel"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-pink-500"
