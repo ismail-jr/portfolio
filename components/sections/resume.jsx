@@ -57,7 +57,7 @@ const Resume = () => {
             {/* First Experience */}
             <div className="pt-10">
               <h3 className="pl-6 text-xl font-medium text-gray-300">
-                Backend Engineer - KIG (Koudri Innovation Groupe)
+                Backend Engineer - Amalitech
               </h3>
               <p className="text-yellow-600 pl-6 pt-2">2024 — NOW</p>
               <p className="p pl-6">

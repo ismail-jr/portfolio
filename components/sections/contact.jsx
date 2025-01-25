@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import SendIcon from "@mui/icons-material/Send"; // Import the Send icon from Material UI
+import SendIcon from "@mui/icons-material/Send";
+import BlockIcon from "@mui/icons-material/Block"; // Red stop icon
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,30 +10,33 @@ const Contact = () => {
   });
   const [isSending, setIsSending] = useState(false);
   const [feedback, setFeedback] = useState("");
-  const [errorVisible, setErrorVisible] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
 
+  // Validation patterns
+  const nameRegex = /^[a-zA-Z\s]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Check if all fields are valid
   useEffect(() => {
-    if (feedback) {
-      const timer = setTimeout(() => {
-        setFeedback("");
-      }, 30000); // Hide feedback after 30 seconds
-      return () => clearTimeout(timer);
-    }
-  }, [feedback]);
+    const isNameValid = nameRegex.test(formData.name);
+    const isEmailValid = emailRegex.test(formData.email);
+    const isMessageValid = formData.message.trim().length > 0;
 
+    setIsFormValid(isNameValid && isEmailValid && isMessageValid);
+  }, [formData]);
+
+  // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-
-    if (errorVisible && value) {
-      setErrorVisible(false);
-    }
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isFormValid) return; // Prevent submission if form is invalid
+
     setIsSending(true);
-    setErrorVisible(false);
 
     try {
       const response = await fetch("/api/sendEmail", {
@@ -64,7 +68,7 @@ const Contact = () => {
       </h1>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-4">
-          {/* Name and Email */}
+          {/* Name Field */}
           <div className="flex flex-col w-full sm:w-1/2">
             <label className="text-lg font-medium mb-2">Name:</label>
             <input
@@ -77,6 +81,7 @@ const Contact = () => {
               className="p-3 border rounded-2xl focus:outline-none focus:ring-1 focus:ring-yellow-600 mb-6"
             />
           </div>
+          {/* Email Field */}
           <div className="flex flex-col w-full sm:w-1/2">
             <label className="text-lg font-medium mb-2">Email:</label>
             <input
@@ -91,6 +96,7 @@ const Contact = () => {
           </div>
         </div>
 
+        {/* Message Field */}
         <div className="flex flex-col">
           <label className="text-lg font-medium mb-2">Message:</label>
           <textarea
@@ -103,16 +109,23 @@ const Contact = () => {
           />
         </div>
 
-        {/* Align button to the far right */}
+        {/* Submit Button */}
         <div className="flex justify-end">
           <button
             type="submit"
-            disabled={isSending}
+            disabled={!isFormValid || isSending}
             className={`flex items-center px-6 py-3 text-white rounded-2xl ${
-              isSending ? "bg-gray-400" : "bg-yellow-600 hover:bg-yellow-700"
+              !isFormValid || isSending
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-yellow-600 hover:bg-yellow-700"
             }`}
           >
-            {isSending ? (
+            {!isFormValid ? (
+              <>
+                <span className="mr-2">Send Message</span>
+                <SendIcon />
+              </>
+            ) : isSending ? (
               <span>Sending...</span>
             ) : (
               <>
@@ -134,13 +147,6 @@ const Contact = () => {
           }`}
         >
           {feedback}
-        </p>
-      )}
-
-      {/* Error message that vanishes after 30 seconds */}
-      {errorVisible && feedback === "" && (
-        <p className="mt-4 text-lg text-red-600">
-          Failed to send message. Please try again.
         </p>
       )}
     </div>

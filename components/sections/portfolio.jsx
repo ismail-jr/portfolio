@@ -14,7 +14,7 @@ const PortfolioComponent = () => {
       ? Portfolio
       : Portfolio.filter((item) => item.category === activeCategory);
 
-  const categories = ["All", "Mobile App", "Web App", "AI SE"];
+  const categories = ["All", "Backend", "Frontend", "AI/ML", "PFE"];
 
   return (
     <div className="portfolio p-6">
@@ -41,13 +41,11 @@ const PortfolioComponent = () => {
       </nav>
 
       {/* Portfolio Grid */}
-      <div className="grid grid-cols-3 gap-6">
-        {filteredPortfolio.map((project, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {filteredPortfolio.map((project) => (
           <div
             key={project.id}
-            className={`  rounded-lg shadow-lg overflow-hidden ${
-              index >= 6 ? "col-span-3 md:col-span-1 md:grid-cols-3" : ""
-            }`}
+            className="rounded-lg shadow-lg overflow-hidden"
           >
             {/* Project Image */}
             <div className="relative group">
@@ -59,7 +57,7 @@ const PortfolioComponent = () => {
               {/* Overlay with Eye Icon */}
               <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
                 <a
-                  href={`https://github.com/user/repo-${project.id}`} // Update with actual GitHub repo link
+                  href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-yellow-600"
@@ -69,8 +67,8 @@ const PortfolioComponent = () => {
               </div>
             </div>
             {/* Description */}
-            <div className="p-4 cursor-pointer">
-              <h1 className=" text-xl font-bold text-gray-400">
+            <div className="p-4">
+              <h1 className="text-xl font-bold text-gray-400">
                 {project.description}
               </h1>
               <p className="text-gray-500 text-lg mt-2">{project.category}</p>
