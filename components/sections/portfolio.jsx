@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import { Portfolio } from "../../public/portfolio";
 import { Visibility } from "@mui/icons-material";
 
@@ -49,10 +50,14 @@ const PortfolioComponent = () => {
           >
             {/* Project Image */}
             <div className="relative group">
-              <img
+              <Image
                 src={project.Image}
                 alt={`Project ${project.id}`}
-                className="w-full h-48 object-cover"
+                width={500}
+                height={300}
+                className="object-cover"
+                placeholder="blur"
+                blurDataURL={project.Image}
               />
               {/* Overlay with Eye Icon */}
               <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
