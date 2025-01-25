@@ -15,7 +15,7 @@ const mon = Montserrat({
 });
 
 export const metadata = {
-  title: "My Portfolio",
+  title: "Ismail",
   description: "Showcase of my work and projects",
 };
 
