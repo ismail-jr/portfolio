@@ -26,13 +26,13 @@ const Sidebar = () => {
   }
 
   return (
-    <div className="flex flex-col sm:flex-row">
+    <div className="flex flex-col sm:flex-row ">
       {/* Sidebar */}
-      <div className="side-bar w-full sm:w-72 h-auto p-6 pt-12 rounded-2xl shadow-lg border border-gray-600 bg-gray-900 flex flex-col space-y-6 overflow-y-auto scrollbar-hide relative">
+      <div className="side-bar w-full sm:w-72 h-auto p-6 pt-12 rounded-2xl shadow-lg border border-gray-600 bg-gray-900 flex flex-col space-y-6 overflow-y-auto scrollbar-hide relative right-3">
         {/* Profile Section */}
         <div className="flex items-center sm:flex-col sm:items-center justify-between w-full">
           {/* Profile Image */}
-          <div className="w-2/5 sm:w-3/5">
+          <div className="w-3/5 sm:w-4/5">
             <Image
               src="/images/Ismail.jpg"
               alt="Profile Image of Jibriel Ismail"

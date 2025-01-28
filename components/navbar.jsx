@@ -3,14 +3,14 @@ import React from "react";
 const Navbar = ({ activeSection, setActiveSection }) => {
   return (
     <nav className="navbar">
-      <ul className="flex space-x-7 -mt-20 p-5 shadow-yellow-500 rounded-xl shadow-sm ">
+      <ul className="flex space-x-7 -mt-20 p-5 bg-navbar rounded-xl">
         <li>
           <button
             onClick={() => setActiveSection("about")}
             className={`pt-3 ${
               activeSection === "about"
                 ? "text-yellow-500 font-bold"
-                : "text-gray-600"
+                : "text-gray-300 font-bold"
             }`}
           >
             About
@@ -22,7 +22,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             className={`pt-3 ${
               activeSection === "portfolio"
                 ? "text-yellow-500 font-bold"
-                : "text-gray-600"
+                : "text-gray-300 font-bold"
             }`}
           >
             Resume
@@ -34,7 +34,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             className={`pt-3 ${
               activeSection === "resume"
                 ? "text-yellow-500 font-bold"
-                : "text-gray-600"
+                : "text-gray-300 font-bold"
             }`}
           >
             Portfolio
@@ -46,7 +46,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             className={`pt-3 ${
               activeSection === "contact"
                 ? "text-yellow-500 font-bold"
-                : "text-gray-600"
+                : "text-gray-300 font-bold"
             }`}
           >
             Contact

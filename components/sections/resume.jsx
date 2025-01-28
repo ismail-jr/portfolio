@@ -106,7 +106,7 @@ const Resume = () => {
                 {skill.name}
               </h3>
               <div
-                className="radial-progress text-yellow-600 border-yellow-600 border-4 w-20 h-20 mx-auto"
+                className="radial-progress text-yellow-600 border-gray-100 border-4 w-20 h-20 mx-auto"
                 style={{ "--value": skill.value }}
                 role="progressbar"
               >

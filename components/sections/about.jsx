@@ -20,12 +20,12 @@ const About = () => {
     {
       name: "Lucy Adom",
       avatar: "/images/avatar-2.png",
-      text: "I couldn't be happier with the e-commerce website developed by KERIM. As a single developer, KERIM not only understood my vision but brought it to life with a level of precision and creativity that exceeded my expectations. The website is not only visually stunning but also highly functional, providing an excellent shopping experience for our customers. KERIM's dedication and expertise made the entire process smooth, and the results speak for themselves. I highly recommend KERIM for anyone looking for a skilled and reliable developer.",
+      text: "I couldn't be happier with the e-commerce website developed by ISMAIL. As a single developer, ISMAIL not only understood my vision but brought it to life with a level of precision and creativity that exceeded my expectations. The website is not only visually stunning but also highly functional, providing an excellent shopping experience for our customers. ISMAIL's dedication and expertise made the entire process smooth, and the results speak for themselves. I highly recommend ISMAIL for anyone looking for a skilled and reliable developer.",
     },
     {
       name: "Peter Essibu",
       avatar: "/images/avatar-1.png",
-      text: "Working with KERIM on our startup website was a fantastic experience. As a solo developer, KERIM not only grasped the essence of our brand but also delivered a website that perfectly aligns with our vision. The modern design, user-friendly interface, and responsive layout have been instrumental in establishing our online presence. KERIM went above and beyond, providing valuable insights and creative solutions throughout the development process. I highly recommend KERIM to any startup or business looking for a dedicated and skilled developer.",
+      text: "Working with ISMAIL on our startup website was a fantastic experience. As a solo developer, ISMAIL not only grasped the essence of our brand but also delivered a website that perfectly aligns with our vision. The modern design, user-friendly interface, and responsive layout have been instrumental in establishing our online presence. ISMAIL went above and beyond, providing valuable insights and creative solutions throughout the development process. I highly recommend ISMAIL to any startup or business looking for a dedicated and skilled developer.",
     },
   ];
   return (

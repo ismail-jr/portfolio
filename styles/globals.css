@@ -39,6 +39,9 @@ body {
 .navbar ul li {
   font-weight: 500;
 }
+.bg-navbar {
+  background: #2d2d2d;
+}
 .about {
   background: var(--box-color);
   color: #ffff;
@@ -57,5 +60,5 @@ body {
 }
 .p {
   line-height: 1.7rem;
-  color: #b6b6b6;
+  color: #d4d1d1;
 }
