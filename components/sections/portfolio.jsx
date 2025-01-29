@@ -25,7 +25,7 @@ const PortfolioComponent = () => {
       </h1>
 
       {/* Navbar */}
-      <nav className="flex gap-6 mb-10 text-sm">
+      <nav className="flex gap-3 mb-10 text-sm">
         {categories.map((category) => (
           <a
             key={category}
@@ -42,7 +42,7 @@ const PortfolioComponent = () => {
       </nav>
 
       {/* Portfolio Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-6">
         {filteredPortfolio.map((project) => (
           <div
             key={project.id}
