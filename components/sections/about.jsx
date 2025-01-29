@@ -4,7 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const About = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [selectedTestimonial, setSelectedTestimonial] = useState("");
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
 
   const handleOpenModal = (testimonial) => {
     setSelectedTestimonial(testimonial);
@@ -13,24 +13,27 @@ const About = () => {
 
   const handleCloseModal = () => {
     setOpenModal(false);
-    setSelectedTestimonial("");
+    setSelectedTestimonial(null);
   };
 
   const testimonials = [
     {
       name: "Lucy Adom",
+      date: "12 June, 2024",
       avatar: "/images/avatar-2.png",
       text: "I couldn't be happier with the e-commerce website developed by ISMAIL. As a single developer, ISMAIL not only understood my vision but brought it to life with a level of precision and creativity that exceeded my expectations. The website is not only visually stunning but also highly functional, providing an excellent shopping experience for our customers. ISMAIL's dedication and expertise made the entire process smooth, and the results speak for themselves. I highly recommend ISMAIL for anyone looking for a skilled and reliable developer.",
     },
     {
       name: "Peter Essibu",
+      date: "14 January, 2025",
       avatar: "/images/avatar-1.png",
       text: "Working with ISMAIL on our startup website was a fantastic experience. As a solo developer, ISMAIL not only grasped the essence of our brand but also delivered a website that perfectly aligns with our vision. The modern design, user-friendly interface, and responsive layout have been instrumental in establishing our online presence. ISMAIL went above and beyond, providing valuable insights and creative solutions throughout the development process. I highly recommend ISMAIL to any startup or business looking for a dedicated and skilled developer.",
     },
   ];
+
   return (
     <>
-      <div className="about p-6 ">
+      <div className="about p-6">
         <h1 className="text-4xl font-bold mb-10 relative">
           About Me
           <span className="absolute left-0 bottom-[-14px] w-16 h-1.5 bg-yellow-600 rounded"></span>
@@ -130,7 +133,7 @@ const About = () => {
             <div
               key={index}
               className="relative bg-gray-900 bg-opacity-20 backdrop-blur-md border border-gray-700 shadow-lg rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition-transform duration-300"
-              onClick={() => handleOpenModal(testimonial.text)}
+              onClick={() => handleOpenModal(testimonial)}
             >
               {/* Avatar */}
               <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
@@ -157,7 +160,7 @@ const About = () => {
       {/* Modal */}
       <Modal open={openModal} onClose={handleCloseModal}>
         <Box
-          className="bg-gray-900 border border-gray-700 text-white p-6 rounded-xl shadow-xl"
+          className="bg-gray-900 border border-gray-700 text-white p-6 rounded-xl shadow-xl transition-all duration-300"
           sx={{
             width: "90%",
             maxWidth: "600px",
@@ -172,8 +175,11 @@ const About = () => {
           >
             <CloseIcon />
           </IconButton>
-          <h2 className="text-2xl font-semibold mb-4">Testimonial</h2>
-          <p className="p">{selectedTestimonial}</p>
+          <h2 className="text-2xl font-semibold mb-4">
+            {selectedTestimonial?.name}
+          </h2>
+          <p className="text-gray-400 mb-4">{selectedTestimonial?.date}</p>
+          <p className="p">{selectedTestimonial?.text}</p>
         </Box>
       </Modal>
     </>
