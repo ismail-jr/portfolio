@@ -40,28 +40,25 @@ const About = () => {
         </h1>
         <p className="p">
           Hi, I’m Jibriel Ismail, a Software Engineer and Full-Stack Web
-          Developer with 3 years of experience, based in Ghana. I’m passionate
-          about transforming complex problems into simple, elegant, and
-          intuitive solutions that deliver real value to users.
+          Developer, based in Ghana. I'm Passionate about turning complex
+          problems into simple, scalable solutions. With 3+ years of experience,
+          I specialize in Node.js, React.js, and Next.js, building secure,
+          high-performance web apps.
         </p>
         <div className="my-4"></div>
 
         <p className="p">
-          Specializing in Node.js, React.js, and Next.js, I focus on building
-          secure, scalable systems with a solid foundation in cloud
-          cybersecurity. As a Backend Engineer at Amalitech, I oversee backend
-          architecture, manage VPS and cloud infrastructure, and ensure the
-          security and performance of high-traffic e-commerce platforms. In
-          addition to frontend development, I have extensive experience with
-          React.js, creating seamless, user-friendly web applications. I’ve
-          shared my expertise as a Next.js instructor on Headstater, empowering
-          learners worldwide, and as a developer in UCC-GH, where I’ve delivered
-          a range of successful freelance projects. My skill set spans the full
-          software development lifecycle from system design and architecture to
-          deployment and maintenance ensuring that I deliver high-quality,
-          user-focused solutions that meet both business and technical goals. If
-          you’re looking for a developer who’s dedicated to excellence,
-          innovation, and bringing your vision to life, let’s connect!
+          At Amalitech, I architect backends, manage cloud infrastructure, and
+          optimize e-commerce platforms. As a Next.js instructor on Headstater
+          and a freelancer at UCC-GH, I empower learners and deliver impactful
+          projects. I thrive on crafting seamless user experiences and ensuring
+          robust system security. From backend architecture to frontend
+          interactivity, I handle end-to-end development with precision. My
+          expertise in cloud security and scalable infrastructure ensures
+          businesses stay ahead. Driven by innovation and efficiency, I bring
+          visions to life through clean code and intuitive design. If you need a
+          developer who builds with excellence, let’s connect and make it
+          happen!
         </p>
       </div>
 
@@ -160,7 +157,7 @@ const About = () => {
       {/* Modal */}
       <Modal open={openModal} onClose={handleCloseModal}>
         <Box
-          className="bg-gray-900 border border-gray-700 text-white p-6 rounded-xl shadow-xl transition-all duration-300"
+          className="bg-gray-900 border border-gray-700 text-white p-6 rounded-xl shadow-xl"
           sx={{
             width: "90%",
             maxWidth: "600px",

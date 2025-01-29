@@ -26,7 +26,7 @@ const Sidebar = () => {
   }
 
   return (
-    <div className="flex flex-col sm:flex-row ">
+    <div className="flex flex-col sm:flex-row">
       {/* Sidebar */}
       <div className="side-bar w-full sm:w-72 h-auto p-6 pt-12 rounded-2xl shadow-lg border border-gray-600 bg-gray-900 flex flex-col space-y-6 overflow-y-auto scrollbar-hide relative right-3">
         {/* Profile Section */}
@@ -44,27 +44,35 @@ const Sidebar = () => {
 
           {/* Name and Title */}
           <div className="w-3/5 sm:w-full sm:mt-4 pl-4 flex flex-col items-center justify-center sm:flex-col">
-            <h2 className="text-xl font-bold text-white mb-4">
+            <h2 className="text-xl font-bold text-white mb-4 whitespace-nowrap">
               JIBRIEL ISMAIL
             </h2>{" "}
-            {/* Added margin-bottom */}
-            <p className="text-white mt-2 sm:mt-0 sm:ml-4 rounded-lg shadow-sm shadow-yellow-600 p-2">
+            {/* Prevent breaking into two lines */}
+            <p className="text-white mt-2 sm:mt-0 sm:ml-4 rounded-lg shadow-sm shadow-yellow-600 p-2 whitespace-nowrap">
               Software Engineer
             </p>
           </div>
 
           {/* Toggle Button for Medium and Small Screens */}
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-white sm:hidden flex absolute top-0 right-0 transform -translate-x-1/2"
-            title="show contact"
-          >
-            {isExpanded ? (
-              <ArrowDropUp className="text-3xl text-yellow-600" />
-            ) : (
-              <ArrowDropDown className="text-3xl text-yellow-600 bg-slate-700 rounded-lg shadow-xl" />
-            )}
-          </button>
+          <div className="relative">
+            {/* Tooltip Container */}
+            <div
+              className="tooltip mr-10 pb-12" // Changed to tooltip-bottom
+              data-tip={isExpanded ? "Hide Contact" : "Show Contact"}
+            >
+              {/* Button */}
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-white sm:hidden flex absolute bottom-24 left-12 transform -translate-x-1/2"
+              >
+                {isExpanded ? (
+                  <ArrowDropUp className="text-3xl text-yellow-600 bg-slate-700 rounded-xl shadow-xl hover:text-yellow-500 transition-colors duration-300" />
+                ) : (
+                  <ArrowDropDown className="text-3xl text-yellow-600 bg-slate-700 rounded-xl shadow-xl hover:text-yellow-500 transition-colors duration-300" />
+                )}
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Sidebar Content */}
@@ -79,12 +87,12 @@ const Sidebar = () => {
           <div className="space-y-6 mt-4">
             {/* Email */}
             <div className="flex items-start space-x-3">
-              <EmailOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600" />
+              <EmailOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600 hover:text-yellow-500 transition-colors duration-300" />
               <div>
                 <h1 className="text-sm font-semibold text-white">EMAIL</h1>
                 <a
                   href="mailto:ismail.jibriel.jr@gmail.com"
-                  className="text-sm text-gray-500 hover:underline"
+                  className="text-sm text-gray-500 hover:underline hover:text-yellow-500 transition-colors duration-300"
                 >
                   ismail.jibriel.jr@gmail.com
                 </a>
@@ -93,12 +101,12 @@ const Sidebar = () => {
 
             {/* Phone */}
             <div className="flex items-start space-x-3">
-              <PhoneAndroidOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600" />
+              <PhoneAndroidOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600 hover:text-yellow-500 transition-colors duration-300" />
               <div>
                 <h1 className="text-sm font-semibold text-white">PHONE</h1>
                 <a
                   href="tel:+233599329539"
-                  className="text-sm text-gray-500 hover:underline"
+                  className="text-sm text-gray-500 hover:underline hover:text-yellow-500 transition-colors duration-300"
                 >
                   +233 599329539
                 </a>
@@ -107,7 +115,7 @@ const Sidebar = () => {
 
             {/* Birthday */}
             <div className="flex items-start space-x-3">
-              <CalendarViewMonthOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600" />
+              <CalendarViewMonthOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600 hover:text-yellow-500 transition-colors duration-300" />
               <div>
                 <h1 className="text-sm font-semibold text-white">BIRTHDAY</h1>
                 <p className="text-sm text-gray-500">OCT 21, 2002</p>
@@ -116,7 +124,7 @@ const Sidebar = () => {
 
             {/* Location */}
             <div className="flex items-start space-x-3">
-              <RoomOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600" />
+              <RoomOutlined className="text-gray-600 p-1 text-3xl rounded-l-lg shadow-lg shadow-yellow-600 hover:text-yellow-500 transition-colors duration-300" />
               <div>
                 <h1 className="text-sm font-semibold text-white">LOCATION</h1>
                 <p className="text-sm text-gray-500">Kumasi, Ghana</p>
@@ -132,7 +140,7 @@ const Sidebar = () => {
               href="https://github.com/ismail-jr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-yellow-600"
+              className="text-gray-600 hover:text-yellow-600 transition-colors duration-300"
             >
               <GitHub className="text-3xl" />
             </a>
@@ -140,7 +148,7 @@ const Sidebar = () => {
               href="https://linkedin.com/in/jibriel-ismail-309a88266"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-500"
+              className="text-gray-600 hover:text-blue-500 transition-colors duration-300"
             >
               <LinkedIn className="text-3xl" />
             </a>
@@ -148,7 +156,7 @@ const Sidebar = () => {
               href="https://twitter.com/IsmailJibr36051"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-400"
+              className="text-gray-600 hover:text-blue-400 transition-colors duration-300"
             >
               <X className="text-3xl" />
             </a>
@@ -156,7 +164,7 @@ const Sidebar = () => {
               href="https://instagram.com/ismail.jibriel"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-pink-500"
+              className="text-gray-600 hover:text-pink-500 transition-colors duration-300"
             >
               <Instagram className="text-3xl" />
             </a>
