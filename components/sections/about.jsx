@@ -62,14 +62,12 @@ const About = () => {
         </p>
       </div>
 
-      <section className="my-12">
-        <div className="flex flex-col sm:flex-row items-center sm:items-start">
-          <h1 className="text-3xl font-bold mb-8 text-white pl-7">What I Do</h1>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+      {/* What I Do Section */}
+      <section className="my-12 px-4 md:px-8">
+        <h1 className="text-3xl font-bold mb-8 text-white">What I Do</h1>
+        <div className="flex flex-col sm:flex-row gap-8">
           {/* First Card */}
-          <div className="relative bg-gray-600 bg-opacity-20 backdrop-blur-md border border-gray-800 shadow-inner rounded-xl p-6">
+          <div className="flex-1 relative bg-gray-600 bg-opacity-20 backdrop-blur-md border border-gray-800 shadow-inner rounded-xl p-6">
             <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
               {/* SVG Icon */}
               <div className="w-20 h-20 sm:w-40 sm:h-20">
@@ -94,7 +92,7 @@ const About = () => {
           </div>
 
           {/* Second Card */}
-          <div className="relative bg-gray-600 bg-opacity-20 backdrop-blur-md border border-gray-800 shadow-inner rounded-xl p-6">
+          <div className="flex-1 relative bg-gray-600 bg-opacity-20 backdrop-blur-md border border-gray-800 shadow-inner rounded-xl p-6">
             <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
               {/* SVG Icon */}
               <div className="w-20 h-20 sm:w-40 sm:h-20">
@@ -120,17 +118,18 @@ const About = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
       <section className="my-16 px-4 md:px-8">
         <h1 className="text-3xl font-bold mb-12 text-white">Testimonials</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-8">
+        <div className="flex flex-col sm:flex-row gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative bg-gray-900 bg-opacity-20 backdrop-blur-md border border-gray-700 shadow-lg rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition-transform duration-300"
+              className="flex-1 relative bg-gray-600 bg-opacity-20 backdrop-blur-md border border-gray-800 shadow-inner rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={() => handleOpenModal(testimonial)}
             >
               {/* Avatar */}
-              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
+              <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 pt-10">
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
@@ -154,7 +153,7 @@ const About = () => {
       {/* Modal */}
       <Modal open={openModal} onClose={handleCloseModal}>
         <Box
-          className="bg-gray-900 border border-gray-700 text-white p-6 rounded-xl shadow-xl"
+          className="bg-gray-600 bg-opacity-20 backdrop-blur-lg border border-gray-800 shadow-inner text-white p-6 rounded-xl"
           sx={{
             width: "90%",
             maxWidth: "600px",
